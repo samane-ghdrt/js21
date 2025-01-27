@@ -13,5 +13,17 @@
 
 //!Answer:
 function createPerson(name, age,profession) {
-    
+
+        const factory = {};
+        factory.name=name;
+        factory.age=age;
+        factory.profession=profession;
+    factory.introduce = function() {
+           return `Hi, my name is ${this.name}. I'm ${this.age} years old and work as a ${this.profession}.`;
+      }
+    return ;
 }
+
+const factory=createPerson("John-Doe",30,"Web-Developer");
+// 
+console.log(factory.introduce);
